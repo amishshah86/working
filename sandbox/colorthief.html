@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Color Thief Sandbox</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="Amish">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<style type="text/css">
+
+input[type=text]{
+	display: inline-block;
+	color: #444;
+	width: 70%;
+}
+
+.seedContainer{
+	width: 60%;
+	height: 50%;
+	margin: 2% 0;
+	overflow: hidden;
+}
+
+#seedImage{
+	max-width: 100%;
+}
+
+.swatch{
+	display: inline-block;
+	width: 8%;
+	height: 24px;
+	margin: 1% 2% 0 0;
+	border: 2px solid rgba(255,255,255,0.7);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+img.burns-effect {
+	animation:burnsEffect 10s ease alternate infinite; /* Change this to alternate to stop the loop. */
+	-ms-animation:burnsEffect 10s ease alternate infinite;
+	-webkit-animation:burnsEffect 10s ease alternate infinite;
+	-o-animation:burnsEffect 10s ease alternate infinite;
+	-moz-animation:burnsEffect 10s ease alternate infinite;
+}
+
+@-webkit-keyframes burnsEffect {
+
+	0%{
+		transform: scale(1.0) translate(-40px,5px);
+		-ms-transform: scale(1.0); /* IE 9 */
+		-webkit-transform: scale(1.0) translate(-40px,5px); /* Safari and Chrome */
+		-o-transform: scale(1.0); /* Opera */
+		-moz-transform: scale(1.0); /* Firefox */
+	}
+	100%{
+		transform: scale(1.2) translate(0,0);
+	    -ms-transform: scale(1.2); /* IE 9 */
+	    -webkit-transform: scale(1.2) translate(0,0); /* Safari and Chrome */
+	    -o-transform: scale(1.2); /* Opera */
+	    -moz-transform: scale(1.2); /* Firefox */
+	}
+}
+</style>
+
+</head>
+<body>
+
+<div class="wrap">
+	<div class="container">
+		<div class="jumbotron">
+			<h1 class="heading">Dynamic Color Scheme</h1>
+			<p class="lead">Enter an image URL in the box below</p>
+				<p><input class="seedSource form-control" type="text" placeholder="Image URL here"/>
+				</p>
+			<div class="seedContainer">
+				<img id="seedImage" class="burns-effect" src=""/>
+			</div>
+			<!-- <p><button class="trigger">Click</button></p> -->
+
+			<div class="swatches"></div>
+		</div>
+	</div>
+</div>
+
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script src="js/libs/jquery.lettering.js"></script>
+<script src="js/libs/mustache.js"></script>
+<script src="js/color-thief.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="js/libs/modernizr.custom.js"></script>
+<script src="js/skinner.js"></script>
+
+</body>
+</html>
